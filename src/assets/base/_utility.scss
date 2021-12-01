@@ -1,0 +1,30 @@
+/* =======================
+HELPERS / UTILITY
+=========================*/
+.dashed-line-top {
+  border-top: 1px dashed $bs-tertiary-light;
+  margin-top: 0.5rem;
+  padding-top: $bs-base-sizing;
+}
+
+.scrollable-section {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.soft-wrap {
+  overflow-wrap: anywhere;
+}
+
+.no-border {
+  border: 0 none !important;
+}
+
+.no-margin {
+  margin-bottom: 0 !important;
+}

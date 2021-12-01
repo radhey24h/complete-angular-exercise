@@ -1,0 +1,203 @@
+/* =======================
+MAIN STYLES
+=========================*/
+
+* {
+  -webkit-user-select: none;
+}
+body{
+  min-width: 1280px;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+html, body {
+  font-size: 12px;
+  color: $bs-copy-color;
+  height: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+:focus {
+  outline: 0 none;
+}
+
+[class^="tficons-"], [class*=" tficons-"] {
+  color: unset;
+}
+
+iframe {
+  border: 0;
+}
+
+.bs-flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bs-flex-content {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.lnr {
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 18px;
+  width: 18px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thumb-xs,
+.thumb-sm,
+.thumb-lg,
+.thumb-xlg,
+.thumb {
+  position: relative;
+  display: inline-block;
+  text-align: center; }
+
+h1 small,
+h1 .small, h2 small,
+h2 .small, h3 small,
+h3 .small, h4 small,
+h4 .small, h5 small,
+h5 .small, h6 small,
+h6 .small,
+.h1 small,
+.h1 .small, .h2 small,
+.h2 .small, .h3 small,
+.h3 .small, .h4 small,
+.h4 .small, .h5 small,
+.h5 .small, .h6 small,
+.h6 .small {
+  font-weight: 500;
+  font-size: 75%;
+  color: #999999; }
+
+@-ms-viewport {
+  width: auto;
+}
+
+
+/***********************/
+/*        Layout       */
+/***********************/
+
+.loading-message-spinner {
+  font-size: 69px;
+}
+
+.loading-message-text {
+  margin-top: 21px;
+  color: #333;
+  font-family: Open Sans;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.app {
+  height: 100%;
+  display: block;
+}
+
+.app-loading {
+  visibility: hidden;
+}
+
+.page-controls, .content-wrap, .loader-wrap {
+  left: 274px;
+  transition: left 0.3s ease-in-out; }
+@media (min-width: 768px) {
+  .page-controls, .content-wrap, .loader-wrap {
+    margin-left: 50px;
+    left: 224px; } }
+.nav-collapsed .page-controls, .nav-collapsed .content-wrap, .nav-collapsed .loader-wrap {
+  left: 0; }
+@media (min-width: 992px) {
+  .nav-static .page-controls, .nav-static .content-wrap, .nav-static .loader-wrap {
+    transition: none;
+    left: 0;
+    margin-left: 274px; } }
+
+.page-controls {
+  transition: left 0.3s ease-in-out, right 0.3s ease-in-out;
+  right: -274px; }
+.nav-collapsed .page-controls {
+  right: 0; }
+@media (min-width: 992px) {
+  .nav-static .page-controls {
+    right: 0; } }
+
+.widget {
+  width: 100%;
+  height: calc(100% - 4px);
+}
+
+.widget-overflow{
+  overflow: auto;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+/**
+* Components
+**/
+section.widget {
+  border: 0;
+  padding: $bs-base-sizing;
+}
+
+footer {
+  > * {
+    margin: 0 0 0 $bs-base-sizing;
+  }
+
+  .cancel {
+    color: $bs-error;
+    cursor: pointer;
+
+    &:focus {
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background: transparent;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.grpc-traffic-monitor-widget-highlight {
+  border: 2px dashed red;
+}
+
+.portfolio-hierarchy-container .alert{
+  position: fixed;
+  z-index: 99;
+}
+
+.monitored-entity-multiple-container .alert{
+  position: fixed;
+  z-index: 99;
+}

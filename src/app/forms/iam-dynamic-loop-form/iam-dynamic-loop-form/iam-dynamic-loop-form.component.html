@@ -1,0 +1,37 @@
+<div class="label">
+  <div *ngFor="let lv of labelVersions; index as idx" class="label-row">
+    <div class="label-left-column">
+      <span class="label-name">{{lv.labelName}}</span>
+      <span class="label-url">{{lv.urlName}}</span>
+    </div>
+    <div class="devider"></div>
+    <div class="label-right-column">
+      <div class="deploy-number">
+        <!-- <iaf-generic-mat-select [optionList]="lv.versions" [displayMemberPath]="'name'" [valueMemberPath]="'code'"
+          [selectedValue]="lv.labelVersionCode" (optionSelected)="onCustomViewSelectionChanged($event, idx)"
+          [placeholder]="'Select Version'" [required]="lv.isRequired">
+        </iaf-generic-mat-select> -->
+
+        <mat-form-field appearance="fill">
+          <mat-label>Select</mat-label>
+          <mat-select (selectionChange)="onCustomViewSelectionChanged($event, idx)">
+            <mat-option value="one">First option</mat-option>
+            <mat-option value="two">Second option</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+      <div class="deploy-progress" *ngIf="lv.inProgress; else noProgress">
+        <div [ngStyle]="{'width.%': '(lv.progressWidth | async)'}" class="activate-progress-bar">
+          {{lv.processText}}
+        </div>
+      </div>
+      <ng-template #noProgress>
+        <div class="deploy-details">
+          <span class="deploy-trick">&#10004;</span>
+          <span class="deploy-date">{{lv.deployedDate}}</span>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

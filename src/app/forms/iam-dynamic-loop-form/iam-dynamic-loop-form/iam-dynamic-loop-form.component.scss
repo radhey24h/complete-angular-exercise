@@ -1,0 +1,127 @@
+@import "../../../../assets/base/variables";
+
+.label-row {
+  display: flex;
+  border-bottom: 2px dotted $bs-tertiary;
+  align-items: center;
+  padding: calc(#{$bs-base-sizing} * 1);
+}
+
+.label-left-column {
+  width: 35%;
+}
+
+.devider {
+  border-left: 1px solid $bs-tertiary;
+  height: calc(#{$bs-base-sizing} * 8);
+  margin-left: 0%;
+  margin-right: 5%;
+  margin-bottom: -2%;
+}
+
+.label-name {
+  color: #53575c;
+  display: flex;
+  margin: calc(#{$bs-base-sizing});
+  margin-left: 0;
+  font-size: calc(#{$bs-base-sizing} * 2);
+  line-height: calc(#{$bs-base-sizing} * 2);
+}
+
+.label-url {
+  color: $bs-section-header-title;
+  display: flex;
+  margin: calc(#{$bs-base-sizing});
+  margin-left: 0;
+  line-height: calc(#{$bs-base-sizing} * 2);
+}
+
+.label-right-column {
+  display: flex;
+  width: 100%;
+  height: 10px;
+}
+
+.deploy-number {
+  width: 40%;
+}
+
+.deploy-trick {
+  color: $bs-section-header-title;
+  margin: calc(#{$bs-base-sizing});
+  font-size: calc(#{$bs-base-sizing} * 2);
+  line-height: calc(#{$bs-base-sizing} * 2);
+}
+
+.deploy.date {
+  color: #53575c;
+  margin: calc(#{$bs-base-sizing});
+  margin-left: 0;
+  line-height: calc(#{$bs-base-sizing} * 2);
+}
+
+.deploy-details {
+  margin-left: 12px;
+}
+
+.deploy-progress {
+  width: 50%;
+  height: 23px;
+  margin-left: 20px;
+  background: #ddd;
+  border-radius: 4px;
+  border: 1px solid #53575c;
+}
+
+.activate-progress-bar {
+  height: 20px;
+  background: $bs-section-header-title;
+}
+
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: unset;
+}
+
+::ng-deep .mat-option-pseudo-checkbox.mat-pseudo-checkbox-checked {
+  background-color: #009596;
+}
+
+::ng-deep .custom-select-box-option.mat-option.mat-active{
+  background: none;
+  color: #000;
+}
+
+::ng-deep .mat-option.mat-active{
+  background: none;
+}
+
+::ng-deep .mat-select-panel.generic-mat-select-box{
+  margin-left: -9px !important;
+  border-radius: 0px;
+  max-height: 100%;
+
+}
+
+::ng-deep .mat-select-panel.generic-mat-select-box:not(.mat-select-panel-above){
+  margin-top: calc(8px * 3.0);
+  max-width: none;
+}
+
+::ng-deep .custom-select-box-option.mat-option:not(.mat-option-multiple):not(.mat-active){
+  color: #000;
+}
+
+::ng-deep .custom-select-box-option.mat-option:hover{
+   color: white !important;
+}
+
+::ng-deep .mat-select-panel.generic-mat-select-single-box{
+  margin-left: -9px !important;
+  border-radius: 0px;
+  max-height:  280px;
+}
+::ng-deep .mat-select-panel.generic-mat-select-single-box:not(.mat-select-panel-above){
+  margin-top: calc(8px * 3.0);
+  max-width: none;
+  min-width: 108% !important;
+}

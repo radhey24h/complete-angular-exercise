@@ -1,0 +1,66 @@
+/* =======================
+TYPOGRAPHY
+=========================*/
+
+.subtitle {
+  z-index: 2;
+  border-bottom: dashed 1px #eaebeb;
+  height: 55px;
+  padding-left: 12px;
+  padding-right: 12px
+}
+
+.subtitle.navOpen {
+  padding-left: 200px;
+}
+
+.subtitle h3 {
+  display: inline-block;
+  color: $bs-primary;
+  margin: 0;
+  padding: 10px 0 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cta-link-primary,
+.cta-link-secondary {
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.cta-link-primary,
+.cta-link-primary:active {
+  color: $bs-primary;
+}
+
+.cta-link-primary:hover,
+.cta-link-primary:focus {
+  color: $bs-success;
+}
+
+.cta-link-secondary,
+.cta-link-secondary:active {
+  color: $bs-error;
+}
+
+.cta-link-secondary:hover {
+  color: $bs-tertiary;
+}
+
+.link-primary {
+  color: $bs-link;
+  cursor: pointer;
+}
+
+.link-primary:hover {
+  text-decoration: underline;
+}
+
+.display-as-danger {
+  color: $bs-error;
+}
