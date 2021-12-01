@@ -22,8 +22,8 @@
 
       </div>
       <div class="deploy-progress" *ngIf="lv.inProgress; else noProgress">
-        <div [ngStyle]="{'width.%': '(lv.progressWidth | async)'}" class="activate-progress-bar">
-          {{lv.processText}}
+        <div [ngStyle]="{width.%:progressWidth}" class="activate-progress-bar">
+          {{processText}}
         </div>
       </div>
       <ng-template #noProgress>

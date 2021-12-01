@@ -11,6 +11,7 @@ export class IamDynamicLoopFormComponent implements OnInit {
 
   public labelVersions: LabelVersions[];
   public progressWidth: number;
+  public processText: string;
 
   constructor() {
   }
@@ -28,8 +29,6 @@ export class IamDynamicLoopFormComponent implements OnInit {
         versions: this.getBuildNumuber(),
         isRequired: true,
         inProgress: false,
-        progressWidth: 0,
-        processText: '',
         deployedDate: '2021 sep 05 @ 09:11:37'
       };
     });
@@ -48,16 +47,16 @@ export class IamDynamicLoopFormComponent implements OnInit {
     console.log(value);
     let labelVersion = this.labelVersions[idx];
     labelVersion.labelVersionCode = value;
-    labelVersion.processText = 'Activating ';
     console.log(labelVersion);
     this.completeProcessBar(labelVersion);
   }
 
   public completeProcessBar(labelVersion: LabelVersions) {
     labelVersion.inProgress = true;
-    labelVersion.progressWidth = 0;
+    this.progressWidth = 0;
     range(1, 100).pipe(concatMap(i => of(i).pipe(delay(100 + (Math.random() * 300))))).subscribe(val => {
-      labelVersion.progressWidth = val;
+      this.progressWidth = val;
+      this.processText = 'Activating ';
     }).add(() => {
       labelVersion.inProgress = false;
     });
@@ -70,8 +69,6 @@ export class LabelVersions {
   public labelURL: string;
   public labelVersionCode: string;
   public versions: Versions[];
-  public progressWidth: number;
-  public processText: string;
   public inProgress: boolean;
   public deployedDate: string;
   public isRequired: true;

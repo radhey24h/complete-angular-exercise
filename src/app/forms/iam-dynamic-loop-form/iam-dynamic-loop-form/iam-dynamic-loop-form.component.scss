@@ -78,50 +78,9 @@
   background: $bs-section-header-title;
 }
 
-::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
-  color: unset;
-}
-
-::ng-deep .mat-option-pseudo-checkbox.mat-pseudo-checkbox-checked {
-  background-color: #009596;
-}
-
-::ng-deep .custom-select-box-option.mat-option.mat-active{
-  background: none;
-  color: #000;
-}
-
-::ng-deep .mat-option.mat-active{
-  background: none;
-}
-
-::ng-deep .mat-select-panel.generic-mat-select-box{
-  margin-left: -9px !important;
-  border-radius: 0px;
-  max-height: 100%;
-
-}
-
-::ng-deep .mat-select-panel.generic-mat-select-box:not(.mat-select-panel-above){
-  margin-top: calc(8px * 3.0);
-  max-width: none;
-}
-
-::ng-deep .custom-select-box-option.mat-option:not(.mat-option-multiple):not(.mat-active){
-  color: #000;
-}
-
-::ng-deep .custom-select-box-option.mat-option:hover{
-   color: white !important;
-}
-
-::ng-deep .mat-select-panel.generic-mat-select-single-box{
-  margin-left: -9px !important;
-  border-radius: 0px;
-  max-height:  280px;
-}
-::ng-deep .mat-select-panel.generic-mat-select-single-box:not(.mat-select-panel-above){
-  margin-top: calc(8px * 3.0);
-  max-width: none;
-  min-width: 108% !important;
+.mat-form-field {
+  background-color: #53575c;
+  height: 32px;
+  padding: 2px;
+  margin-bottom: 5px;
 }
